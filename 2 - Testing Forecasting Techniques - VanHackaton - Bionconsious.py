@@ -16,7 +16,7 @@ from sklearn.multioutput import MultiOutputRegressor
 from sklearn.neural_network import MLPRegressor
 import os
 from ClarkeError import clarke_error_grid
-
+import sys
 import pickle
 plt.rcParams['figure.figsize'] = [15, 5]
 
@@ -102,6 +102,9 @@ def main():
                     pipeX = pickle.load(handle) 
                 with open(os.path.join('Data',fileY), 'rb') as handle:
                     pipeY = pickle.load(handle)
+            else:
+                print('Error: .pkl file not Found')
+                sys.exit()
             
             #Takes Two Weeks as training
             X_train = pipeX[0:4032].fillna(0).values
