@@ -1,0 +1,10 @@
+/archive
+/data
+/results
+/tensorboard
+/log
+.ipynb_checkpoints/
+.vscode/
+/__pycache__
+/glucose_forecast/__pycache__
+*__pycache__
